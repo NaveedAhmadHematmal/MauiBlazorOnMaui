@@ -1,0 +1,24 @@
+﻿@page "/"
+@inject IJSRuntime js
+
+<PageTitle>Index</PageTitle>
+
+
+<div id="chart-container" style="height:400; width:400">
+		<canvas id="bar-chart"></canvas>
+</div>
+
+
+<input type="button" value="Generate " @onclick="@(async () => await js.InvokeVoidAsync("GenerateChart", labeltoshow, datatoshow))"></input>
+
+
+@code{
+    double[] datatoshow;
+    string[] labeltoshow;
+
+    protected override async Task OnInitializedAsync()
+    {
+        datatoshow = new double[] { 4, 5, 3, 4, 3, 5 };
+        labeltoshow = new string[] { "Value1", "Value2", "Value3", "Value4", "Value5", "Value6" };
+    }
+}
