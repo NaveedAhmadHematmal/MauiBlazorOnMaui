@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiBlazorOnMaui.ChartsPage"
              xmlns:b="clr-namespace:Microsoft.AspNetCore.Components.WebView.Maui;assembly=Microsoft.AspNetCore.Components.WebView.Maui"
+             xmlns:local="clr-namespace:MauiBlazorOnMaui"
              Title="ChartsPage"
              BackgroundColor="White">
     <b:BlazorWebView HostPage="wwwroot/index.html">
